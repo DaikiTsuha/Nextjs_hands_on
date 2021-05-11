@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "next_js_hands_on",
+  "builds": [
+    {
+      "src": "next.config.js",
+      "use": "@now/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}
