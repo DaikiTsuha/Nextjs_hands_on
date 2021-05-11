@@ -1,1 +1,2 @@
-# Nextjs_hands_on
+# Nextjs-hands-on
+チェインケースらしい？

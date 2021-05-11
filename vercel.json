@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "nextjs_hands_on",
+  "name": "nextjs-hands-on",
   "builds": [
     {
       "src": "next.config.js",
