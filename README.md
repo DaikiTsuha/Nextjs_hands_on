@@ -1,1 +1,1 @@
-# Next_js_hands_on
+# Nextjs_hands_on
