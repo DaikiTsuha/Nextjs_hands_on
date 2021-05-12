@@ -22,39 +22,46 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1
   }
 }))
-const Manip = ({ globalIps }) => {
-  return (
-    <div>
-      {globalIps.map(v => <p key={v.id}>ip: {v.ip_address}</p>)}
-    </div>
-  )
-}
 //const Manip = ({ globalIps }) => {
-//  const classes = useStyles()
-//
 //  return (
-//    <div className={classes.root}>
-//      <AppBar position='static'>
-//        <Toolbar>
-//          <IconButton edge='start' className={classes.menuButton} color='inherit' aria-label='Menu'>
-//            <MenuIcon />
-//          </IconButton>
-//          <Typography variant='h6' className={classes.title}>
-//            MANIP
-//          </Typography>
-//          <Button color='inherit'>Hello!</Button>
-//        </Toolbar>
-//      </AppBar>
+//    <div>
+//      {globalIps.map(v => <p key={v.id}>ip: {v.ip_address}</p>)}
 //
-//      {globalIps.map(v => <p key={v.id}>ip: {v.ip_address} location: {v.location}</p>)}
+//      <div>
+//        <h2>link</h2>
+//        <ul>
+//          <li><Link href='/link'><a>link</a></Link></li>
+//        </ul>
+//      </div>
 //    </div>
 //  )
 //}
+const Manip = ({ globalIps }) => {
+  const classes = useStyles()
+
+  return (
+    <div className={classes.root}>
+      <AppBar position='static'>
+        <Toolbar>
+          <IconButton edge='start' className={classes.menuButton} color='inherit' aria-label='Menu'>
+            <MenuIcon />
+          </IconButton>
+          <Typography variant='h6' className={classes.title}>
+            MANIP
+          </Typography>
+          <Button color='inherit'>Hello!</Button>
+        </Toolbar>
+      </AppBar>
+
+      {globalIps.map(v => <p key={v.id}>ip: {v.ip_address} location: {v.location}</p>)} 
+    </div>
+  )
+}
 
 Manip.getInitialProps = async ctx => {
   const query = {}
 
-  const fetchGlobalIps = await fetch('https://manip.tools.isca.jp/api/globalips')
+  const fetchGlobalIps = await fetch('http://localhost:3000/api/manip')
   // console.log(fetchGlobalIps)
   const globalIps = await fetchGlobalIps.json()
   // const fetchGlobalIps = await fetch('https://manip.tools.isca.jp/api/globalips', query)
