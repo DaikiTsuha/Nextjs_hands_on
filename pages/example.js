@@ -9,8 +9,6 @@ import Button from '@material-ui/core/Button'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 
-
-
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1
@@ -22,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1
   }
 }))
-//const Manip = ({ globalIps }) => {
+// const Manip = ({ globalIps }) => {
 //  return (
 //    <div>
 //      {globalIps.map(v => <p key={v.id}>ip: {v.ip_address}</p>)}
@@ -35,7 +33,7 @@ const useStyles = makeStyles(theme => ({
 //      </div>
 //    </div>
 //  )
-//}
+// }
 const Manip = ({ globalIps }) => {
   const classes = useStyles()
 
@@ -53,7 +51,7 @@ const Manip = ({ globalIps }) => {
         </Toolbar>
       </AppBar>
 
-      {globalIps.map(v => <p key={v.id}>ip: {v.ip_address} location: {v.location}</p>)} 
+      {globalIps.map(v => <p key={v.id}>ip: {v.ip_address} location: {v.location}</p>)}
     </div>
   )
 }
