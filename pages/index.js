@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
 const Home = () => (
   <div>
@@ -13,6 +13,6 @@ const Home = () => (
       <li>怒涛のloginはaboutにあるやつ</li>
     </ul>
   </div>
-)
+);
 
-export default Home
+export default Home;
