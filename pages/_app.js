@@ -6,7 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from '../src/theme'
 
 class MyApp extends App {
-  componentDidMount () {
+  componentDidMount() {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side')
     if (jssStyles) {
@@ -14,7 +14,7 @@ class MyApp extends App {
     }
   }
 
-  render () {
+  render() {
     const { Component, pageProps } = this.props
 
     return (

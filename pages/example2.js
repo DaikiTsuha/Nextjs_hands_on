@@ -10,14 +10,14 @@ import MenuIcon from '@material-ui/icons/Menu'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   menuButton: {
-    marginRight: theme.spacing(2)
+    marginRight: theme.spacing(2),
   },
   title: {
-    flexGrow: 1
-  }
+    flexGrow: 1,
+  },
 }))
 
 const Manip = ({ num }) => {
@@ -26,15 +26,15 @@ const Manip = ({ num }) => {
 
   return (
     <div className={classes.root}>
-      <AppBar position='static'>
+      <AppBar position="static">
         <Toolbar>
-          <IconButton edge='start' className={classes.menuButton} color='inherit' aria-label='Menu'>
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="Menu">
             <MenuIcon />
           </IconButton>
-          <Typography variant='h6' className={classes.title}>
+          <Typography variant="h6" className={classes.title}>
             MANIP
           </Typography>
-          <Button color='inherit'>Hello!</Button>
+          <Button color="inherit">Hello!</Button>
         </Toolbar>
       </AppBar>
 
@@ -44,7 +44,11 @@ const Manip = ({ num }) => {
       <div>
         <h2>link</h2>
         <ul>
-          <li><Link href='/link'><a>link</a></Link></li>
+          <li>
+            <Link href="/link">
+              <a>link</a>
+            </Link>
+          </li>
         </ul>
       </div>
     </div>
@@ -52,7 +56,7 @@ const Manip = ({ num }) => {
 }
 
 Manip.getInitialProps = async ctx => ({
-    num: 1
-  })
+  num: 1,
+})
 
 export default Manip

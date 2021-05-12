@@ -11,14 +11,14 @@ import MenuIcon from '@material-ui/icons/Menu'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   menuButton: {
-    marginRight: theme.spacing(2)
+    marginRight: theme.spacing(2),
   },
   title: {
-    flexGrow: 1
-  }
+    flexGrow: 1,
+  },
 }))
 // const Manip = ({ globalIps }) => {
 //  return (
@@ -39,19 +39,23 @@ const Manip = ({ globalIps }) => {
 
   return (
     <div className={classes.root}>
-      <AppBar position='static'>
+      <AppBar position="static">
         <Toolbar>
-          <IconButton edge='start' className={classes.menuButton} color='inherit' aria-label='Menu'>
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="Menu">
             <MenuIcon />
           </IconButton>
-          <Typography variant='h6' className={classes.title}>
+          <Typography variant="h6" className={classes.title}>
             MANIP
           </Typography>
-          <Button color='inherit'>Hello!</Button>
+          <Button color="inherit">Hello!</Button>
         </Toolbar>
       </AppBar>
 
-      {globalIps.map(v => <p key={v.id}>ip: {v.ip_address} location: {v.location}</p>)}
+      {globalIps.map(v => (
+        <p key={v.id}>
+          ip: {v.ip_address} location: {v.location}
+        </p>
+      ))}
     </div>
   )
 }
@@ -65,7 +69,7 @@ Manip.getInitialProps = async ctx => {
   // const fetchGlobalIps = await fetch('https://manip.tools.isca.jp/api/globalips', query)
   // const globalIps = await fetchGlobalIps.json()
   return {
-    globalIps: globalIps || []
+    globalIps: globalIps || [],
   }
 }
 

@@ -10,35 +10,35 @@ import Index from './index'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   menuButton: {
-    marginRight: theme.spacing(2)
+    marginRight: theme.spacing(2),
   },
   title: {
-    flexGrow: 1
-  }
+    flexGrow: 1,
+  },
 }))
 
-export default function ButtonAppBar () {
+export default function ButtonAppBar() {
   const classes = useStyles()
 
   return (
     <div className={classes.root}>
-      <AppBar position='static'>
+      <AppBar position="static">
         <Toolbar>
-          <IconButton edge='start' className={classes.menuButton} color='inherit' aria-label='Menu'>
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="Menu">
             <MenuIcon />
           </IconButton>
-          <Typography variant='h6' className={classes.title}>
+          <Typography variant="h6" className={classes.title}>
             News
           </Typography>
           <Index />
-          <Button color='inherit'>Login</Button>
-          <Button color='inherit'>Login</Button>
-          <Button color='inherit'>Login</Button>
-          <Button color='inherit'>Login</Button>
-          <Button color='inherit'>Log</Button>
+          <Button color="inherit">Login</Button>
+          <Button color="inherit">Login</Button>
+          <Button color="inherit">Login</Button>
+          <Button color="inherit">Login</Button>
+          <Button color="inherit">Log</Button>
         </Toolbar>
       </AppBar>
     </div>
