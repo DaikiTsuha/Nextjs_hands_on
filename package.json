@@ -4,7 +4,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next",
-    "lint": "standard",
+    "lint": "eslint --fix './{pages,scripts,src}/*.js' && prettier --write './{pages,src}/**/*.js'",
     "lint:fix": "standard --fix",
     "prettier": "prettier --write \"**/*.{js,jsx,json,md,mdx,css,html,yml,yaml,scss,sass}\" && yarn lint-fix"
   },
@@ -17,6 +17,11 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-react": "^7.23.2",
     "prettier": "^2.3.0",
     "standard": "^16.0.3"
   }
