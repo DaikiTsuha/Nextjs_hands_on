@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
-const Home = () => {
-  return (
+const Home = () => (
     <div>
       <h2>じこしょうかい</h2>
       <ul>
@@ -15,6 +14,5 @@ const Home = () => {
       </ul>
     </div>
   )
-}
 
 export default Home

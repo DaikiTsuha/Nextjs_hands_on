@@ -51,10 +51,8 @@ const Manip = ({ num }) => {
   )
 }
 
-Manip.getInitialProps = async ctx => {
-  return {
+Manip.getInitialProps = async ctx => ({
     num: 1
-  }
-}
+  })
 
 export default Manip

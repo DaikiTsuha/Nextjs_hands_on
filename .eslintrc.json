@@ -1,20 +1,20 @@
 {
     "env": {
         "browser": true,
-        "es2021": true
-    },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
-    ],
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true,
-            "legacyDecorators": true
+        "node": true,
+        "jest": true
+      },
+      "settings": {
+        "ecmascript": 6,
+        "jsx": true,
+        "react": {
+            "createClass": "createReactClass",
+            "version": "detect"
         },
-        "ecmaVersion": 12,
-        "sourceType": "module"
-    },
+        "import/core-modules": ["styled-jsx/css"]
+      },
+    "extends":["plugin:react/recommended", "airbnb", "airbnb/hooks", "prettier"],
+    "parser": "babel-eslint",
     "plugins": [
         "react",
         "react-hooks"

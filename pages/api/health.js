@@ -1,3 +1,1 @@
-export default (req, res) => {
-  return res.end('ok')
-}
+export default (req, res) => res.end('ok')

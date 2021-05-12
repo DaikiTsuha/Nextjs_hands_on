@@ -4,15 +4,20 @@
     "dev": "next",
     "build": "next build",
     "start": "next",
-    "lint": "eslint --fix './{pages,scripts,src}/*.js' && prettier --write './{pages,src}/**/*.js'",
-    "lint:fix": "standard --fix",
-    "prettier": "prettier --write \"**/*.{js,jsx,json,md,mdx,css,html,yml,yaml,scss,sass}\" && yarn lint-fix"
+    "lint": "eslint --fix './{pages,src}/**/*.js' && prettier --write './{pages,src}/**/*.js'"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DaikiTsuha/Nextjs_hands_on"
+  },
+  "license": "UNLICENSED",
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
+    "eslint-config-prettier": "^8.3.0",
     "isomorphic-unfetch": "^3.1.0",
     "next": "^10.2.0",
+    "npm-run-all": "^4.1.5",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
@@ -21,6 +26,7 @@
     "eslint": "^7.26.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.3.0",
