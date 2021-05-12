@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Link from 'next/link'
 import { makeStyles } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
@@ -6,7 +7,6 @@ import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
-import Index from './index'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -20,8 +20,9 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-export default function ButtonAppBar () {
+const Manip = ({ num }) => {
   const classes = useStyles()
+  const [count, setCount] = useState(num)
 
   return (
     <div className={classes.root}>
@@ -31,16 +32,29 @@ export default function ButtonAppBar () {
             <MenuIcon />
           </IconButton>
           <Typography variant='h6' className={classes.title}>
-            News
+            MANIP
           </Typography>
-          <Index />
-          <Button color='inherit'>Login</Button>
-          <Button color='inherit'>Login</Button>
-          <Button color='inherit'>Login</Button>
-          <Button color='inherit'>Login</Button>
-          <Button color='inherit'>Log</Button>
+          <Button color='inherit'>Hello!</Button>
         </Toolbar>
       </AppBar>
+
+      <button onClick={() => setCount(count + 1)}>click me!!!</button>
+      <p>count: {count}</p>
+
+      <div>
+        <h2>link</h2>
+        <ul>
+          <li><Link href='/link'><a>link</a></Link></li>
+        </ul>
+      </div>
     </div>
   )
 }
+
+Manip.getInitialProps = async ctx => {
+  return {
+    num: 1
+  }
+}
+
+export default Manip
